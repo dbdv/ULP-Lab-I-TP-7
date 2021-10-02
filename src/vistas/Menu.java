@@ -59,6 +59,11 @@ public class Menu extends javax.swing.JFrame {
         jmAgregarA.setDelay(100);
         jmAgregarA.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jmAgregarA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jmAgregarA.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jmAgregarAMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jmAgregarA);
 
         jmInscribir.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -68,6 +73,11 @@ public class Menu extends javax.swing.JFrame {
         jmInscribir.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jmInscribir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmInscribir.setMargin(new java.awt.Insets(0, 2, 0, 0));
+        jmInscribir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jmInscribirMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(jmInscribir);
 
         jmSalir.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -112,6 +122,24 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jmSalirMouseClicked
+
+    private void jmAgregarAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jmAgregarAMouseClicked
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        AltaAlumnos alta = new AltaAlumnos();
+        alta.setVisible(true);
+        escritorio.add(alta);
+    }//GEN-LAST:event_jmAgregarAMouseClicked
+
+    private void jmInscribirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jmInscribirMouseClicked
+        // TODO add your handling code here:
+        escritorio.removeAll();
+        escritorio.repaint();
+        FormularioInscripcion form = new FormularioInscripcion();
+        form.setVisible(true);
+        escritorio.add(form);
+    }//GEN-LAST:event_jmInscribirMouseClicked
 
     /**
      * @param args the command line arguments
