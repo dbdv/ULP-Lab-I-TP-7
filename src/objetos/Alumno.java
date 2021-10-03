@@ -64,4 +64,14 @@ public class Alumno {
     public int cantidadMaterias(){
         return materias.size();
     }
+    
+    @Override
+    public boolean equals(Object m){
+        return this.legajo == ((Alumno)m).legajo;
+    }
+    
+    @Override
+    public int hashCode(){
+        return legajo * 2;
+    }
 }

@@ -5,6 +5,9 @@
  */
 package vistas;
 
+import javax.swing.JOptionPane;
+import objetos.Materia;
+
 /**
  *
  * @author daniel
@@ -65,8 +68,18 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
         });
 
         jbSalir.setText("SALIR");
+        jbSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbSalirMouseClicked(evt);
+            }
+        });
 
         jbNuevo.setText("NUEVO");
+        jbNuevo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbNuevoMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,7 +144,34 @@ public class AltaMaterias extends javax.swing.JInternalFrame {
 
     private void jbGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuardarActionPerformed
         // TODO add your handling code here:
+        try{
+            int cod = Integer.parseInt(jtCod.getText());
+            String nombre = jtMateria.getText();
+            int anio = Integer.parseInt(jcAnios.getItemAt(jcAnios.getSelectedIndex()));
+            
+            if(Menu.getMaterias().contains(new Materia(cod, nombre, anio))){
+                JOptionPane.showMessageDialog(this, "El código de la materia que intenta agregar ya se encuentra en el sistema.");
+            }else{
+                Menu.getMaterias().add(new Materia(cod, nombre, anio));
+                JOptionPane.showMessageDialog(this, "Materia cargada exitosamente.");
+            }
+        }catch(NumberFormatException nfe){
+            JOptionPane.showMessageDialog(this, "El código debe ser un número.");
+        }
+        
     }//GEN-LAST:event_jbGuardarActionPerformed
+
+    private void jbSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbSalirMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jbSalirMouseClicked
+
+    private void jbNuevoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbNuevoMouseClicked
+        // TODO add your handling code here:
+        jcAnios.setSelectedIndex(0);
+        jtCod.setText("");
+        jtMateria.setText("");
+    }//GEN-LAST:event_jbNuevoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

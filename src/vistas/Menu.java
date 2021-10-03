@@ -179,9 +179,16 @@ public class Menu extends javax.swing.JFrame {
         });
     }
     
+    public static HashSet<Alumno> getAlumnos(){
+        return alumnos;
+    }
     
-    static private HashSet<Alumno> alumnos = new HashSet<>();
-    static private HashSet<Materia> materias = new HashSet<>();
+    public static HashSet<Materia> getMaterias(){
+        return materias;
+    }
+    
+    final static private HashSet<Alumno> alumnos = new HashSet<>();
+    final static private HashSet<Materia> materias = new HashSet<>();
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane escritorio;
