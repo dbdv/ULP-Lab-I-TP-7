@@ -39,11 +39,14 @@ public class Menu extends javax.swing.JFrame {
         jmSalir = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Administrador de Colegio");
+
+        escritorio.setName("Administrador de colegio"); // NOI18N
 
         jmAgregarM.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jmAgregarM.setForeground(new java.awt.Color(22, 72, 249));
         jmAgregarM.setText("Agregar materia ||");
         jmAgregarM.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmAgregarM.setDelay(100);
         jmAgregarM.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jmAgregarM.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmAgregarM.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -54,9 +57,9 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar1.add(jmAgregarM);
 
         jmAgregarA.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jmAgregarA.setForeground(new java.awt.Color(22, 72, 249));
         jmAgregarA.setText("Agregar alumno ||");
         jmAgregarA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmAgregarA.setDelay(100);
         jmAgregarA.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jmAgregarA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmAgregarA.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -67,9 +70,9 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar1.add(jmAgregarA);
 
         jmInscribir.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jmInscribir.setForeground(new java.awt.Color(22, 72, 249));
         jmInscribir.setText("Inscribir alumno a materia || ");
         jmInscribir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmInscribir.setDelay(100);
         jmInscribir.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jmInscribir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmInscribir.setMargin(new java.awt.Insets(0, 2, 0, 0));
@@ -81,9 +84,9 @@ public class Menu extends javax.swing.JFrame {
         jMenuBar1.add(jmInscribir);
 
         jmSalir.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jmSalir.setForeground(new java.awt.Color(255, 34, 0));
         jmSalir.setText("Salir");
         jmSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jmSalir.setDelay(100);
         jmSalir.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         jmSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jmSalir.addMouseListener(new java.awt.event.MouseAdapter() {
